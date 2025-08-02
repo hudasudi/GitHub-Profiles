@@ -1,0 +1,96 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  box-sizing: border-box;
+  
+}
+body{
+  background: hsl(80, 6%, 54%);
+}
+
+.app-container{
+  width: 100%;
+  max-width: 570px;
+   background: linear-gradient(10deg, rgb(47, 74, 124), rgb(112, 77, 34));
+   margin: 120px auto 0;
+   padding: 10px 10px;
+   border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.search-box{
+  padding: 25px;
+  margin: 4px;
+}
+input{
+  width: 100%;
+  padding: 12px;
+  border: 0;
+  outline: 0;
+  border-radius: 10px;
+}
+.card{
+  width: 100%;
+  max-width: 700px;
+  padding: 30px;
+  margin: 25px auto 0;
+   background: linear-gradient(10deg, rgb(47, 74, 124), rgb(112, 77, 34));
+   border-radius: 10px;
+   min-height: 300px;
+   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+   display: none;
+  
+  }
+.profile-icon{
+ display: flex;
+ align-items: center;
+ gap: 20px;
+}
+img{
+  width: 120px;
+  border: 5px solid rgb(80, 80, 201);
+  border-radius: 60px;
+  
+}
+.user-info{
+  padding: 10px;
+}
+.user{
+  text-align: left;
+  font-size: 20px;
+  color: #e6dddd;
+}
+.bio{
+  margin-top: 20px;
+  color: #e6dddd;
+   text-align: left;
+}
+.account{
+ display: flex;
+ justify-content: space-between;
+ gap: 70px;
+ margin-top: 20px;
+ margin-bottom: 20px;
+ color: #e6dddd;
+}
+.repos {
+display: flex;
+ margin-top: 30px;
+ margin-left: 19px;
+ flex-wrap: wrap;
+ gap: 50px;
+}
+.repo{
+  border: 1px solid rgb(80, 80, 201);
+  background: rgb(80, 80, 201);
+  padding: 10px 15px;
+   border-radius: 10px;
+  font-size: 15px;
+  color: #e6dddd;
+   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+transition: box-shadow 0.2s ease;
+}
+
+.repo:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.696);
+}
