@@ -13,10 +13,14 @@ body{
   width: 100%;
   max-width: 570px;
    background: linear-gradient(10deg, rgb(47, 74, 124), rgb(112, 77, 34));
-   margin: 120px auto 0;
+   margin: 70px auto 0;
    padding: 10px 10px;
    border-radius: 10px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+transition: box-shadow 0.2s ease;
+}
+.app-container:hover{
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.696);
 }
 .search-box{
   padding: 25px;
@@ -31,16 +35,16 @@ input{
 }
 .card{
   width: 100%;
-  max-width: 700px;
+  max-width: 780px;
   padding: 30px;
-  margin: 25px auto 0;
+  margin: 20px auto 0;
    background: linear-gradient(10deg, rgb(47, 74, 124), rgb(112, 77, 34));
    border-radius: 10px;
    min-height: 300px;
    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
    display: none;
-  
-  }
+}
+
 .profile-icon{
  display: flex;
  align-items: center;
@@ -81,15 +85,18 @@ display: flex;
  margin-left: 19px;
  flex-wrap: wrap;
  gap: 50px;
+ 
 }
 .repo{
-  border: 1px solid rgb(80, 80, 201);
+  border: 2px solid rgb(80, 80, 201);
   background: rgb(80, 80, 201);
-  padding: 10px 15px;
+  padding: 9px 15px;
    border-radius: 10px;
   font-size: px;
+  display: flex;
+  gap: 30px;
   color: #e6dddd;
-   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 transition: box-shadow 0.2s ease;
 }
 

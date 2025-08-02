@@ -10,7 +10,7 @@ const img =document.querySelector("img");
 const repos = document.querySelector(".repositry");
 const followers = document.querySelector(".followers");
 const following = document.querySelector(".following");
-const repo = document.querySelector(".repo");
+const repositry = document.querySelector(".repos");
 
 // github users api
 const apiUrl = 'https://api.github.com/users/';
@@ -23,14 +23,26 @@ async function getUsers(user){
   console.log(data); // will remove this later
   
   // update the html with the actual details
-  users.innerHTML = data.name;
-  bio.innerHTML = data.bio;
+  users.innerHTML = data.name || "No name available";
+  bio.innerHTML = data.bio || "No name available";
   repos.innerHTML = data.public_repos;
   followers.innerHTML = data.followers;
   following.innerHTML = data.following;
   img.src = data.avatar_url;
+ }
+ // get the user repos
+ async function getRepos(users){
+   const response = await fetch(`https://api.github.com/users/${users}/repos`); 
+  // object in a json format
+  let repos = await response.json();
+  repositry.innerHTML="";
 
-
+  repos.slice(0,10).forEach(repo => {
+   const div = document.createElement("div");
+   div.classList.add("repo")
+   div.innerHTML = repo.name;
+   repositry.appendChild(div);
+  });
  }
 
 const form = document.querySelector("form")
@@ -42,6 +54,7 @@ form.addEventListener("submit", function(e){
   const username = input.value.trim();
   if(username){
   getUsers(username);
+  getRepos(username);
   document.querySelector(".card").style.display = "block";
   }
 });
