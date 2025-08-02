@@ -6,7 +6,7 @@
   
 }
 body{
-  background: hsl(80, 6%, 54%);
+  background: hsl(223, 6%, 54%);
 }
 
 .app-container{
@@ -47,9 +47,9 @@ input{
  gap: 20px;
 }
 img{
-  width: 120px;
-  border: 5px solid rgb(80, 80, 201);
-  border-radius: 60px;
+  width: 180px;
+  border: 8px solid rgb(80, 80, 201);
+  border-radius: 100px;
   
 }
 .user-info{
@@ -57,13 +57,14 @@ img{
 }
 .user{
   text-align: left;
-  font-size: 20px;
+  font-size: 45px;
   color: #e6dddd;
 }
 .bio{
   margin-top: 20px;
   color: #e6dddd;
    text-align: left;
+   font-size: 15px;
 }
 .account{
  display: flex;
@@ -72,6 +73,7 @@ img{
  margin-top: 20px;
  margin-bottom: 20px;
  color: #e6dddd;
+ font-size: 18px;
 }
 .repos {
 display: flex;
@@ -85,7 +87,7 @@ display: flex;
   background: rgb(80, 80, 201);
   padding: 10px 15px;
    border-radius: 10px;
-  font-size: 15px;
+  font-size: px;
   color: #e6dddd;
    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 transition: box-shadow 0.2s ease;
