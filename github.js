@@ -29,7 +29,7 @@ async function getUsers(user){
   }else{
      // update the html with the actual details
   users.innerHTML = data.name || "No name available";
-  bio.innerHTML = data.bio || "No name available";
+  bio.innerHTML = data.bio || "No bio available";
   repos.innerHTML = data.public_repos;
   followers.innerHTML = data.followers;
   following.innerHTML = data.following;
@@ -49,7 +49,7 @@ async function getUsers(user){
    const div = document.createElement("div");
    div.classList.add("repo")
    div.innerHTML = repo.name;
-   repositry.appendChild(div);
+   repositry.appendChild(div); 
   });
  }
 
@@ -61,9 +61,11 @@ form.addEventListener("submit", function(e){
   e.preventDefault(); // preventing refreshing?
   const username = input.value.trim();
   if(username){
+   
   getUsers(username);
   getRepos(username);
      document.querySelector(".error").style.display = "none";
      document.querySelector(".card").style.display = "block";
   }
+  input.value = "";
 });
