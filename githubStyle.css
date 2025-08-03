@@ -103,3 +103,20 @@ transition: box-shadow 0.2s ease;
 .repo:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.696);
 }
+.error{
+  width: 100%;
+  max-width: 590px;
+  padding: 70px;
+  margin: 20px auto 0;
+   background: linear-gradient(10deg, rgb(47, 74, 124), rgb(112, 77, 34));
+   border-radius: 10px;
+   min-height: 300px;
+   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+   display: none;
+}
+.error p{
+  font-size: 30px;
+  text-align: center;
+  padding: 30px;
+  color: #e6dddd;
+}

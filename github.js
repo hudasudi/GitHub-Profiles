@@ -12,6 +12,7 @@ const followers = document.querySelector(".followers");
 const following = document.querySelector(".following");
 const repositry = document.querySelector(".repos");
 
+
 // github users api
 const apiUrl = 'https://api.github.com/users/';
 
@@ -21,20 +22,27 @@ async function getUsers(user){
   // object in a json format
   let data = await response.json();
   console.log(data); // will remove this later
-  
-  // update the html with the actual details
+
+  if(response.status == 404){
+      document.querySelector(".error").style.display = "block";
+      document.querySelector(".card").style.display = "none";
+  }else{
+     // update the html with the actual details
   users.innerHTML = data.name || "No name available";
   bio.innerHTML = data.bio || "No name available";
   repos.innerHTML = data.public_repos;
   followers.innerHTML = data.followers;
   following.innerHTML = data.following;
   img.src = data.avatar_url;
+
+  }
  }
  // get the user repos
  async function getRepos(users){
    const response = await fetch(`https://api.github.com/users/${users}/repos`); 
   // object in a json format
   let repos = await response.json();
+
   repositry.innerHTML="";
 
   repos.slice(0,10).forEach(repo => {
@@ -55,6 +63,7 @@ form.addEventListener("submit", function(e){
   if(username){
   getUsers(username);
   getRepos(username);
-  document.querySelector(".card").style.display = "block";
+     document.querySelector(".error").style.display = "none";
+     document.querySelector(".card").style.display = "block";
   }
 });
