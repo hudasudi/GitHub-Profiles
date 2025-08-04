@@ -1,8 +1,4 @@
 
-// fetch('https://api.github.com/users/hudasudi')
-// .then(res => res.json())
-// .then(data => console.log(data))
-
 const users = document.querySelector(".user");
 const bio = document.querySelector(".bio");
 const account = document.querySelector(".account");
@@ -21,7 +17,6 @@ async function getUsers(user){
   const response = await fetch(apiUrl + user); 
   // object in a json format
   let data = await response.json();
-  console.log(data); // will remove this later
 
   if(response.status == 404){
       document.querySelector(".error").style.display = "block";
@@ -40,7 +35,6 @@ async function getUsers(user){
  // get the user repos
  async function getRepos(users){
    const response = await fetch(`https://api.github.com/users/${users}/repos`); 
-  // object in a json format
   let repos = await response.json();
 
   repositry.innerHTML="";
