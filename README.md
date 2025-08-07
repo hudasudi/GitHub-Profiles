@@ -28,6 +28,5 @@
 
 Feel free to customize the **Live Demo** link with your actual GitHub Pages URL once deployed.
 
----
 
-If you want, I can help you generate the markdown file or add badges for technologies used!
+
