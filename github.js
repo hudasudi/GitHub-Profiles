@@ -1,4 +1,4 @@
-
+//DOM
 const users = document.querySelector(".user");
 const bio = document.querySelector(".bio");
 const account = document.querySelector(".account");
@@ -18,6 +18,7 @@ async function getUsers(user){
   // object in a json format
   let data = await response.json();
 
+  //if there is no username found
   if(response.status == 404){
       document.querySelector(".error").style.display = "block";
       document.querySelector(".card").style.display = "none";
@@ -32,7 +33,7 @@ async function getUsers(user){
 
   }
  }
- // get the user repos
+ // get the user public repos
  async function getRepos(users){
    const response = await fetch(`https://api.github.com/users/${users}/repos`); 
   let repos = await response.json();
