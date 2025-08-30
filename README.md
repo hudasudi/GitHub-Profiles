@@ -1,4 +1,4 @@
-# 🧑‍💻 GitHub User Finder
+# 👩🏽‍💻 GitHub User Finder
 
 This is a simple web app built with HTML, CSS, and vanilla JavaScript. It lets users search for any GitHub username and displays their profile info along with their top 10 repositories.
 
