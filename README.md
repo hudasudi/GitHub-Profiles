@@ -8,8 +8,8 @@ It is **My First Online Hackathon Project** from **CodeSprout HACKATHON** !!!
 
 ## 🔍 What It Does  
 - Search GitHub users by username  
-- Show profile picture, name, bio, followers, and following  
-- List top 10 repositories  
+- Show profile picture, name, bio, followers, and following and repos 
+- List top 10 **public** repositories  
 
 ---
 
@@ -24,7 +24,7 @@ Making the design responsive on different screen sizes was tricky. Handling API 
 ---
 
 ## 🏆 Accomplishments I'm Proud Of  
-Improving my CSS skills to build a clean UI and learning how to work with external APIs using JavaScript fetch.
+Improving my CSS skills such as FlexBox to build a clean UI and learning how to work with external APIs using JavaScript fetch.
 
 ---
 
