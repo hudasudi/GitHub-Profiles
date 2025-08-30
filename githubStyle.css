@@ -55,7 +55,7 @@ input:focus {
   padding: 30px;
   background: linear-gradient(10deg, #2b2d42, #6c5ce7);
   border-radius: 12px;
-  min-height: 300px;
+  min-height: auto;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
   display: none;
 }
@@ -67,20 +67,20 @@ input:focus {
 }
 
 img {
-  width: 150px;
-  border-radius: 100px;
+  width: clamp(80px, 25vw, 150px);
+  border-radius: 50%;
   border: 5px solid #1e1e2f;
 }
 
 
 .user {
-  font-size: 40px;
+  font-size: clamp(1.2rem, 5vw, 2.5rem); 
   font-weight: bold;
 }
 
 .bio {
   margin-top: 10px;
-  font-size: 14px;
+  font-size: clamp(0.8rem, 2.5vw, 1rem);
   color: #ddd;
 }
 
@@ -89,7 +89,7 @@ img {
   justify-content: space-between;
   margin-top: 20px;
   gap: 40px;
-  font-size: 16px;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
 }
 
 .repos {
@@ -134,19 +134,31 @@ img {
   .profile-icon {
     flex-direction: row;
     align-items: center;
+    text-align: center;
   }
 
-  img {
-    width: 200px;
-  }
 
   .account {
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
+    gap: 12px;
   }
 
   .repos {
     justify-content: center;
+  }
+}
+@media (max-width: 400px) {
+  input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .user {
+    font-size: 1.5rem;
+  }
+
+  img {
+    width: 120px;
   }
 }
